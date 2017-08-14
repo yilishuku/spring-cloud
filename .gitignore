@@ -25,6 +25,4 @@ dist/
 nbdist/
 .nb-gradle/
 .gitignore
-service-ribbon/src/main/resources/static/
-service-ribbon/src/main/resources/templates/
-src/
+
