@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/sql")
+@Api(value = "/星星点灯", description = "星星点灯但是看见发送两地分居阿萨德")
 public class MysqlController {
     private final InfoMapper infoMapper;
 
@@ -30,17 +31,16 @@ public class MysqlController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id", value = "用户id", dataType = "Integer")
     })
-    @ApiResponses({
-            @ApiResponse(code = 200, message = "success")
-    })
+    @ApiResponses({@ApiResponse(code = 200, message = "success")})
     @GetMapping(value = "/get_user")
     public Info GetUser() {
         return infoMapper.findById(1);
     }
 
     @ApiOperation(value = "异常抛出", response = Info.class)
-    @ApiImplicitParam(name = "id", value = "用户id", dataType = "Integer")
-    @ApiResponse(code = 200, message = "success")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "id", value = "id1111", dataType = "Integer", required = true, paramType = "query")
+    })
     @GetMapping(value = "/throw_exception")
     public Info ThrowException(@RequestParam(value = "id") Integer id) throws BusinessException {
         if (id == 1)
