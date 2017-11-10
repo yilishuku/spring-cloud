@@ -25,6 +25,7 @@
 			<url>http://192.168.11.110:8081/nexus/content/groups/public</url>
 		</repository>
 	</repositories>
+
 	<pluginRepositories>
 		<pluginRepository>
 			<id>nexus</id>
@@ -144,6 +145,11 @@
 			<version>${springfox.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>swagger-bootstrap-ui</artifactId>
+			<version>1.5</version>
+		</dependency>
 		<!--servlet-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -169,41 +175,6 @@
 			<artifactId>httpclient</artifactId>
 		</dependency>
 
-		<!--<dependency>
-			<groupId>com.drore.cloud</groupId>
-			<artifactId>cloud-sdk</artifactId>
-			<version>0.4.9</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>slf4j-log4j12</artifactId>
-					<groupId>org.slf4j</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>fastjson</artifactId>
-					<groupId>com.alibaba</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>log4j</artifactId>
-					<groupId>log4j</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>logback-classic</artifactId>
-					<groupId>ch.qos.logback</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>logback-access</artifactId>
-					<groupId>ch.qos.logback</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>logback-core</artifactId>
-					<groupId>ch.qos.logback</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>commons-logging</artifactId>
-					<groupId>commons-logging</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>-->
 	</dependencies>
 
 	<build>
@@ -214,6 +185,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
